@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="theme-color" content="#0b0f18" />
+<title>Block Blast - Fair Edition</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- LANDING PAGE -->
+<div id="landing" class="landing">
+  <div class="landing-content">
+    <h1 class="title">BLOCK<br><span>BLAST</span></h1>
+    <p class="subtitle">FAIR EDITION</p>
+    <div class="rules">
+      <p>Pure spatial reasoning.</p>
+      <p>100% Random. No Ads. No Rigging.</p>
+    </div>
+    <button id="playBtn" class="play-btn" type="button">PLAY NOW</button>
+  </div>
+</div>
+
+<!-- GAME UI -->
+<div id="app" class="app-hidden">
+  <header>
+    <div class="stat">
+      <div class="label">SCORE</div>
+      <div class="value" id="score">0</div>
+    </div>
+    <div class="stat center">
+      <div class="label">COMBO</div>
+      <div class="value combo-val" id="combo">x0</div>
+    </div>
+    <div class="stat right">
+      <div class="label">BEST</div>
+      <div class="value" id="best">0</div>
+    </div>
+  </header>
+
+  <div class="board-wrapper">
+    <div id="board" class="board" aria-label="Game board"></div>
+  </div>
+
+  <div id="tray" class="tray"></div>
+
+  <footer>
+    <button id="newGame" type="button">New Game</button>
+    <span class="hint">No ads - No manipulation<br>Plan your combos</span>
+  </footer>
+</div>
+
+<div id="fx-layer" class="fx-layer"></div>
+
+<!-- GAME OVER OVERLAY -->
+<div id="overlay" class="overlay hidden">
+  <div class="panel">
+    <h1>Game Over</h1>
+    <p>Final score</p>
+    <p><strong id="finalScore">0</strong></p>
+    <p class="msg" id="overlayMsg"></p>
+    <button id="restart" type="button">Play Again</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
